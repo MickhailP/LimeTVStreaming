@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D7ABE64129392117002EFC54 /* LimeTVStreamingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE64029392117002EFC54 /* LimeTVStreamingApp.swift */; };
+		D7ABE64329392117002EFC54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE64229392117002EFC54 /* ContentView.swift */; };
+		D7ABE6452939211A002EFC54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7ABE6442939211A002EFC54 /* Assets.xcassets */; };
+		D7ABE6482939211A002EFC54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7ABE6472939211A002EFC54 /* Preview Assets.xcassets */; };
+		D7ABE6522939211A002EFC54 /* LimeTVStreamingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE6512939211A002EFC54 /* LimeTVStreamingTests.swift */; };
+		D7ABE65C2939211A002EFC54 /* LimeTVStreamingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE65B2939211A002EFC54 /* LimeTVStreamingUITests.swift */; };
+		D7ABE65E2939211A002EFC54 /* LimeTVStreamingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE65D2939211A002EFC54 /* LimeTVStreamingUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D7ABE64E2939211A002EFC54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7ABE63529392117002EFC54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7ABE63C29392117002EFC54;
+			remoteInfo = LimeTVStreaming;
+		};
+		D7ABE6582939211A002EFC54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7ABE63529392117002EFC54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7ABE63C29392117002EFC54;
+			remoteInfo = LimeTVStreaming;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D7ABE63D29392117002EFC54 /* LimeTVStreaming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LimeTVStreaming.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7ABE64029392117002EFC54 /* LimeTVStreamingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeTVStreamingApp.swift; sourceTree = "<group>"; };
+		D7ABE64229392117002EFC54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D7ABE6442939211A002EFC54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7ABE6472939211A002EFC54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D7ABE64D2939211A002EFC54 /* LimeTVStreamingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LimeTVStreamingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7ABE6512939211A002EFC54 /* LimeTVStreamingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeTVStreamingTests.swift; sourceTree = "<group>"; };
+		D7ABE6572939211A002EFC54 /* LimeTVStreamingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LimeTVStreamingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7ABE65B2939211A002EFC54 /* LimeTVStreamingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeTVStreamingUITests.swift; sourceTree = "<group>"; };
+		D7ABE65D2939211A002EFC54 /* LimeTVStreamingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeTVStreamingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7ABE63A29392117002EFC54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7ABE64A2939211A002EFC54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7ABE6542939211A002EFC54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D7ABE63429392117002EFC54 = {
+			isa = PBXGroup;
+			children = (
+				D7ABE63F29392117002EFC54 /* LimeTVStreaming */,
+				D7ABE6502939211A002EFC54 /* LimeTVStreamingTests */,
+				D7ABE65A2939211A002EFC54 /* LimeTVStreamingUITests */,
+				D7ABE63E29392117002EFC54 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D7ABE63E29392117002EFC54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7ABE63D29392117002EFC54 /* LimeTVStreaming.app */,
+				D7ABE64D2939211A002EFC54 /* LimeTVStreamingTests.xctest */,
+				D7ABE6572939211A002EFC54 /* LimeTVStreamingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7ABE63F29392117002EFC54 /* LimeTVStreaming */ = {
+			isa = PBXGroup;
+			children = (
+				D7ABE64029392117002EFC54 /* LimeTVStreamingApp.swift */,
+				D7ABE64229392117002EFC54 /* ContentView.swift */,
+				D7ABE6442939211A002EFC54 /* Assets.xcassets */,
+				D7ABE6462939211A002EFC54 /* Preview Content */,
+			);
+			path = LimeTVStreaming;
+			sourceTree = "<group>";
+		};
+		D7ABE6462939211A002EFC54 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D7ABE6472939211A002EFC54 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D7ABE6502939211A002EFC54 /* LimeTVStreamingTests */ = {
+			isa = PBXGroup;
+			children = (
+				D7ABE6512939211A002EFC54 /* LimeTVStreamingTests.swift */,
+			);
+			path = LimeTVStreamingTests;
+			sourceTree = "<group>";
+		};
+		D7ABE65A2939211A002EFC54 /* LimeTVStreamingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D7ABE65B2939211A002EFC54 /* LimeTVStreamingUITests.swift */,
+				D7ABE65D2939211A002EFC54 /* LimeTVStreamingUITestsLaunchTests.swift */,
+			);
+			path = LimeTVStreamingUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D7ABE63C29392117002EFC54 /* LimeTVStreaming */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7ABE6612939211A002EFC54 /* Build configuration list for PBXNativeTarget "LimeTVStreaming" */;
+			buildPhases = (
+				D7ABE63929392117002EFC54 /* Sources */,
+				D7ABE63A29392117002EFC54 /* Frameworks */,
+				D7ABE63B29392117002EFC54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LimeTVStreaming;
+			productName = LimeTVStreaming;
+			productReference = D7ABE63D29392117002EFC54 /* LimeTVStreaming.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D7ABE64C2939211A002EFC54 /* LimeTVStreamingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7ABE6642939211A002EFC54 /* Build configuration list for PBXNativeTarget "LimeTVStreamingTests" */;
+			buildPhases = (
+				D7ABE6492939211A002EFC54 /* Sources */,
+				D7ABE64A2939211A002EFC54 /* Frameworks */,
+				D7ABE64B2939211A002EFC54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7ABE64F2939211A002EFC54 /* PBXTargetDependency */,
+			);
+			name = LimeTVStreamingTests;
+			productName = LimeTVStreamingTests;
+			productReference = D7ABE64D2939211A002EFC54 /* LimeTVStreamingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D7ABE6562939211A002EFC54 /* LimeTVStreamingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7ABE6672939211A002EFC54 /* Build configuration list for PBXNativeTarget "LimeTVStreamingUITests" */;
+			buildPhases = (
+				D7ABE6532939211A002EFC54 /* Sources */,
+				D7ABE6542939211A002EFC54 /* Frameworks */,
+				D7ABE6552939211A002EFC54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7ABE6592939211A002EFC54 /* PBXTargetDependency */,
+			);
+			name = LimeTVStreamingUITests;
+			productName = LimeTVStreamingUITests;
+			productReference = D7ABE6572939211A002EFC54 /* LimeTVStreamingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7ABE63529392117002EFC54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					D7ABE63C29392117002EFC54 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					D7ABE64C2939211A002EFC54 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = D7ABE63C29392117002EFC54;
+					};
+					D7ABE6562939211A002EFC54 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = D7ABE63C29392117002EFC54;
+					};
+				};
+			};
+			buildConfigurationList = D7ABE63829392117002EFC54 /* Build configuration list for PBXProject "LimeTVStreaming" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D7ABE63429392117002EFC54;
+			productRefGroup = D7ABE63E29392117002EFC54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7ABE63C29392117002EFC54 /* LimeTVStreaming */,
+				D7ABE64C2939211A002EFC54 /* LimeTVStreamingTests */,
+				D7ABE6562939211A002EFC54 /* LimeTVStreamingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7ABE63B29392117002EFC54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7ABE6482939211A002EFC54 /* Preview Assets.xcassets in Resources */,
+				D7ABE6452939211A002EFC54 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7ABE64B2939211A002EFC54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7ABE6552939211A002EFC54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7ABE63929392117002EFC54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7ABE64329392117002EFC54 /* ContentView.swift in Sources */,
+				D7ABE64129392117002EFC54 /* LimeTVStreamingApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7ABE6492939211A002EFC54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7ABE6522939211A002EFC54 /* LimeTVStreamingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7ABE6532939211A002EFC54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7ABE65E2939211A002EFC54 /* LimeTVStreamingUITestsLaunchTests.swift in Sources */,
+				D7ABE65C2939211A002EFC54 /* LimeTVStreamingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D7ABE64F2939211A002EFC54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7ABE63C29392117002EFC54 /* LimeTVStreaming */;
+			targetProxy = D7ABE64E2939211A002EFC54 /* PBXContainerItemProxy */;
+		};
+		D7ABE6592939211A002EFC54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7ABE63C29392117002EFC54 /* LimeTVStreaming */;
+			targetProxy = D7ABE6582939211A002EFC54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D7ABE65F2939211A002EFC54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D7ABE6602939211A002EFC54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7ABE6622939211A002EFC54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LimeTVStreaming/Preview Content\"";
+				DEVELOPMENT_TEAM = 95D5HHTHLU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MichailDev.LimeTVStreaming;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D7ABE6632939211A002EFC54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LimeTVStreaming/Preview Content\"";
+				DEVELOPMENT_TEAM = 95D5HHTHLU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MichailDev.LimeTVStreaming;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D7ABE6652939211A002EFC54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95D5HHTHLU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MichailDev.LimeTVStreamingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LimeTVStreaming.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LimeTVStreaming";
+			};
+			name = Debug;
+		};
+		D7ABE6662939211A002EFC54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95D5HHTHLU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MichailDev.LimeTVStreamingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LimeTVStreaming.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LimeTVStreaming";
+			};
+			name = Release;
+		};
+		D7ABE6682939211A002EFC54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95D5HHTHLU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MichailDev.LimeTVStreamingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LimeTVStreaming;
+			};
+			name = Debug;
+		};
+		D7ABE6692939211A002EFC54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 95D5HHTHLU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MichailDev.LimeTVStreamingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LimeTVStreaming;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7ABE63829392117002EFC54 /* Build configuration list for PBXProject "LimeTVStreaming" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7ABE65F2939211A002EFC54 /* Debug */,
+				D7ABE6602939211A002EFC54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7ABE6612939211A002EFC54 /* Build configuration list for PBXNativeTarget "LimeTVStreaming" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7ABE6622939211A002EFC54 /* Debug */,
+				D7ABE6632939211A002EFC54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7ABE6642939211A002EFC54 /* Build configuration list for PBXNativeTarget "LimeTVStreamingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7ABE6652939211A002EFC54 /* Debug */,
+				D7ABE6662939211A002EFC54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7ABE6672939211A002EFC54 /* Build configuration list for PBXNativeTarget "LimeTVStreamingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7ABE6682939211A002EFC54 /* Debug */,
+				D7ABE6692939211A002EFC54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7ABE63529392117002EFC54 /* Project object */;
+}
