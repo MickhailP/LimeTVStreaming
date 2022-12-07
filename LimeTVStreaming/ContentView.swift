@@ -8,19 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let networking: NetworkingProtocol
+    @EnvironmentObject var favourites: Favourites
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        ChannelsView(networking: networking, favourites: favourites)
+            .alert(isPresented: $favourites.showErrorAlert) {
+                Alert(title: Text("Database error"), message: Text(favourites.errorMessage))
+            }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    
+    static let favouritesChannels = Favourites()
+    
     static var previews: some View {
-        ContentView()
+        ContentView(networking: Networking())
+            .environmentObject(favouritesChannels)
     }
 }

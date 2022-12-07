@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D707900B293CA5D1005E8152 /* ChannelCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = D707900A293CA5D1005E8152 /* ChannelCategories.swift */; };
+		D707900D293CC4C5005E8152 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D707900C293CC4C5005E8152 /* VideoView.swift */; };
+		D7079010293CD5E8005E8152 /* M3U8Decoder in Frameworks */ = {isa = PBXBuildFile; productRef = D707900F293CD5E8005E8152 /* M3U8Decoder */; };
+		D7079012293CD7E0005E8152 /* MasterPlayist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7079011293CD7E0005E8152 /* MasterPlayist.swift */; };
+		D7079014293CDEDF005E8152 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7079013293CDEDF005E8152 /* VideoModel.swift */; };
+		D7079016293CDF95005E8152 /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7079015293CDF95005E8152 /* VideoPlayerViewModel.swift */; };
+		D79F4B6A2939FC8D005F6FE1 /* ChannelsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79F4B692939FC8C005F6FE1 /* ChannelsDataService.swift */; };
+		D79F4B6C293B2DE4005F6FE1 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D79F4B6B293B2DE4005F6FE1 /* .swiftlint.yml */; };
+		D79F4B6F293B3DD4005F6FE1 /* InfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79F4B6E293B3DD4005F6FE1 /* InfoSection.swift */; };
+		D79F4B73293B451C005F6FE1 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79F4B72293B451C005F6FE1 /* NetworkingError.swift */; };
+		D79F4B75293B4D9B005F6FE1 /* ImagePreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79F4B74293B4D9B005F6FE1 /* ImagePreviewViewModel.swift */; };
+		D79F4B77293B523C005F6FE1 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79F4B76293B523C005F6FE1 /* SearchBar.swift */; };
+		D79F4B79293B7040005F6FE1 /* FavouriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79F4B78293B7040005F6FE1 /* FavouriteButton.swift */; };
+		D79F4B7B293B754E005F6FE1 /* ChannelsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79F4B7A293B754E005F6FE1 /* ChannelsList.swift */; };
+		D79F4B7E293B78A3005F6FE1 /* CategoriesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79F4B7D293B78A3005F6FE1 /* CategoriesTabView.swift */; };
 		D7ABE64129392117002EFC54 /* LimeTVStreamingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE64029392117002EFC54 /* LimeTVStreamingApp.swift */; };
 		D7ABE64329392117002EFC54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE64229392117002EFC54 /* ContentView.swift */; };
 		D7ABE6452939211A002EFC54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7ABE6442939211A002EFC54 /* Assets.xcassets */; };
@@ -18,6 +33,12 @@
 		D7ABE66E29392225002EFC54 /* ChannelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE66D29392225002EFC54 /* ChannelsModel.swift */; };
 		D7ABE671293924E6002EFC54 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE670293924E6002EFC54 /* Networking.swift */; };
 		D7ABE6732939251E002EFC54 /* NetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE6722939251E002EFC54 /* NetworkingProtocol.swift */; };
+		D7ABE67629392B79002EFC54 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE67529392B79002EFC54 /* Favourites.swift */; };
+		D7ABE67929393723002EFC54 /* ChannelsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE67829393723002EFC54 /* ChannelsViewViewModel.swift */; };
+		D7ABE67C29393799002EFC54 /* ChannelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE67B29393799002EFC54 /* ChannelsView.swift */; };
+		D7ABE67E293937A7002EFC54 /* ChannelRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE67D293937A7002EFC54 /* ChannelRowView.swift */; };
+		D7ABE68029393963002EFC54 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE67F29393963002EFC54 /* ImageLoader.swift */; };
+		D7ABE68229393CBC002EFC54 /* ImagePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE68129393CBC002EFC54 /* ImagePreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +59,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D707900A293CA5D1005E8152 /* ChannelCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCategories.swift; sourceTree = "<group>"; };
+		D707900C293CC4C5005E8152 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		D7079011293CD7E0005E8152 /* MasterPlayist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterPlayist.swift; sourceTree = "<group>"; };
+		D7079013293CDEDF005E8152 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		D7079015293CDF95005E8152 /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
+		D79F4B692939FC8C005F6FE1 /* ChannelsDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsDataService.swift; sourceTree = "<group>"; };
+		D79F4B6B293B2DE4005F6FE1 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		D79F4B6E293B3DD4005F6FE1 /* InfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSection.swift; sourceTree = "<group>"; };
+		D79F4B72293B451C005F6FE1 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		D79F4B74293B4D9B005F6FE1 /* ImagePreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewViewModel.swift; sourceTree = "<group>"; };
+		D79F4B76293B523C005F6FE1 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		D79F4B78293B7040005F6FE1 /* FavouriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteButton.swift; sourceTree = "<group>"; };
+		D79F4B7A293B754E005F6FE1 /* ChannelsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsList.swift; sourceTree = "<group>"; };
+		D79F4B7D293B78A3005F6FE1 /* CategoriesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTabView.swift; sourceTree = "<group>"; };
 		D7ABE63D29392117002EFC54 /* LimeTVStreaming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LimeTVStreaming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7ABE64029392117002EFC54 /* LimeTVStreamingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeTVStreamingApp.swift; sourceTree = "<group>"; };
 		D7ABE64229392117002EFC54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +87,12 @@
 		D7ABE66D29392225002EFC54 /* ChannelsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsModel.swift; sourceTree = "<group>"; };
 		D7ABE670293924E6002EFC54 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		D7ABE6722939251E002EFC54 /* NetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocol.swift; sourceTree = "<group>"; };
+		D7ABE67529392B79002EFC54 /* Favourites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourites.swift; sourceTree = "<group>"; };
+		D7ABE67829393723002EFC54 /* ChannelsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewViewModel.swift; sourceTree = "<group>"; };
+		D7ABE67B29393799002EFC54 /* ChannelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsView.swift; sourceTree = "<group>"; };
+		D7ABE67D293937A7002EFC54 /* ChannelRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelRowView.swift; sourceTree = "<group>"; };
+		D7ABE67F29393963002EFC54 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		D7ABE68129393CBC002EFC54 /* ImagePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7079010293CD5E8005E8152 /* M3U8Decoder in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,11 +121,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D79F4B71293B3DE0005F6FE1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D79F4B7A293B754E005F6FE1 /* ChannelsList.swift */,
+				D79F4B7C293B7580005F6FE1 /* ChannelsListComponents */,
+				D79F4B76293B523C005F6FE1 /* SearchBar.swift */,
+				D79F4B78293B7040005F6FE1 /* FavouriteButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D79F4B7C293B7580005F6FE1 /* ChannelsListComponents */ = {
+			isa = PBXGroup;
+			children = (
+				D7ABE67D293937A7002EFC54 /* ChannelRowView.swift */,
+				D7ABE68129393CBC002EFC54 /* ImagePreview.swift */,
+				D79F4B6E293B3DD4005F6FE1 /* InfoSection.swift */,
+			);
+			path = ChannelsListComponents;
+			sourceTree = "<group>";
+		};
 		D7ABE63429392117002EFC54 = {
 			isa = PBXGroup;
 			children = (
 				D7ABE63F29392117002EFC54 /* LimeTVStreaming */,
 				D7ABE66A2939212E002EFC54 /* .gitignore.md */,
+				D79F4B6B293B2DE4005F6FE1 /* .swiftlint.yml */,
 				D7ABE6502939211A002EFC54 /* LimeTVStreamingTests */,
 				D7ABE65A2939211A002EFC54 /* LimeTVStreamingUITests */,
 				D7ABE63E29392117002EFC54 /* Products */,
@@ -105,6 +169,9 @@
 			children = (
 				D7ABE64029392117002EFC54 /* LimeTVStreamingApp.swift */,
 				D7ABE64229392117002EFC54 /* ContentView.swift */,
+				D7ABE67A29393731002EFC54 /* Views */,
+				D7ABE677293935D2002EFC54 /* ViewModels */,
+				D7ABE67429392B4F002EFC54 /* DataServices */,
 				D7ABE66F293924CC002EFC54 /* Networking */,
 				D7ABE66C293921CE002EFC54 /* Model */,
 				D7ABE6442939211A002EFC54 /* Assets.xcassets */,
@@ -142,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				D7ABE66D29392225002EFC54 /* ChannelsModel.swift */,
+				D7079013293CDEDF005E8152 /* VideoModel.swift */,
+				D7079011293CD7E0005E8152 /* MasterPlayist.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,8 +220,41 @@
 			children = (
 				D7ABE670293924E6002EFC54 /* Networking.swift */,
 				D7ABE6722939251E002EFC54 /* NetworkingProtocol.swift */,
+				D79F4B72293B451C005F6FE1 /* NetworkingError.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		D7ABE67429392B4F002EFC54 /* DataServices */ = {
+			isa = PBXGroup;
+			children = (
+				D7ABE67F29393963002EFC54 /* ImageLoader.swift */,
+				D7ABE67529392B79002EFC54 /* Favourites.swift */,
+				D79F4B692939FC8C005F6FE1 /* ChannelsDataService.swift */,
+				D707900A293CA5D1005E8152 /* ChannelCategories.swift */,
+			);
+			path = DataServices;
+			sourceTree = "<group>";
+		};
+		D7ABE677293935D2002EFC54 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D7ABE67829393723002EFC54 /* ChannelsViewViewModel.swift */,
+				D79F4B74293B4D9B005F6FE1 /* ImagePreviewViewModel.swift */,
+				D7079015293CDF95005E8152 /* VideoPlayerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D7ABE67A29393731002EFC54 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D7ABE67B29393799002EFC54 /* ChannelsView.swift */,
+				D79F4B7D293B78A3005F6FE1 /* CategoriesTabView.swift */,
+				D707900C293CC4C5005E8152 /* VideoView.swift */,
+				D79F4B71293B3DE0005F6FE1 /* Components */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,12 +267,16 @@
 				D7ABE63929392117002EFC54 /* Sources */,
 				D7ABE63A29392117002EFC54 /* Frameworks */,
 				D7ABE63B29392117002EFC54 /* Resources */,
+				D79F4B6D293B2E1E005F6FE1 /* SwiftLint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = LimeTVStreaming;
+			packageProductDependencies = (
+				D707900F293CD5E8005E8152 /* M3U8Decoder */,
+			);
 			productName = LimeTVStreaming;
 			productReference = D7ABE63D29392117002EFC54 /* LimeTVStreaming.app */;
 			productType = "com.apple.product-type.application";
@@ -243,6 +349,9 @@
 				Base,
 			);
 			mainGroup = D7ABE63429392117002EFC54;
+			packageReferences = (
+				D707900E293CD5E8005E8152 /* XCRemoteSwiftPackageReference "M3U8Decoder" */,
+			);
 			productRefGroup = D7ABE63E29392117002EFC54 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D79F4B6C293B2DE4005F6FE1 /* .swiftlint.yml in Resources */,
 				D7ABE6482939211A002EFC54 /* Preview Assets.xcassets in Resources */,
 				D7ABE66B2939212E002EFC54 /* .gitignore.md in Resources */,
 				D7ABE6452939211A002EFC54 /* Assets.xcassets in Resources */,
@@ -281,16 +391,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D79F4B6D293B2E1E005F6FE1 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D7ABE63929392117002EFC54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D7ABE66E29392225002EFC54 /* ChannelsModel.swift in Sources */,
+				D707900D293CC4C5005E8152 /* VideoView.swift in Sources */,
+				D7ABE67629392B79002EFC54 /* Favourites.swift in Sources */,
+				D79F4B6F293B3DD4005F6FE1 /* InfoSection.swift in Sources */,
+				D79F4B7E293B78A3005F6FE1 /* CategoriesTabView.swift in Sources */,
+				D7ABE68029393963002EFC54 /* ImageLoader.swift in Sources */,
+				D707900B293CA5D1005E8152 /* ChannelCategories.swift in Sources */,
 				D7ABE64329392117002EFC54 /* ContentView.swift in Sources */,
+				D7079012293CD7E0005E8152 /* MasterPlayist.swift in Sources */,
+				D7079014293CDEDF005E8152 /* VideoModel.swift in Sources */,
+				D79F4B79293B7040005F6FE1 /* FavouriteButton.swift in Sources */,
+				D79F4B77293B523C005F6FE1 /* SearchBar.swift in Sources */,
 				D7ABE64129392117002EFC54 /* LimeTVStreamingApp.swift in Sources */,
+				D7ABE67C29393799002EFC54 /* ChannelsView.swift in Sources */,
 				D7ABE6732939251E002EFC54 /* NetworkingProtocol.swift in Sources */,
+				D7ABE67929393723002EFC54 /* ChannelsViewViewModel.swift in Sources */,
 				D7ABE671293924E6002EFC54 /* Networking.swift in Sources */,
+				D79F4B73293B451C005F6FE1 /* NetworkingError.swift in Sources */,
+				D79F4B7B293B754E005F6FE1 /* ChannelsList.swift in Sources */,
+				D7ABE67E293937A7002EFC54 /* ChannelRowView.swift in Sources */,
+				D79F4B75293B4D9B005F6FE1 /* ImagePreviewViewModel.swift in Sources */,
+				D7079016293CDF95005E8152 /* VideoPlayerViewModel.swift in Sources */,
+				D79F4B6A2939FC8D005F6FE1 /* ChannelsDataService.swift in Sources */,
+				D7ABE68229393CBC002EFC54 /* ImagePreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +608,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -486,6 +638,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -615,6 +768,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D707900E293CD5E8005E8152 /* XCRemoteSwiftPackageReference "M3U8Decoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ikhvorost/M3U8Decoder";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D707900F293CD5E8005E8152 /* M3U8Decoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D707900E293CD5E8005E8152 /* XCRemoteSwiftPackageReference "M3U8Decoder" */;
+			productName = M3U8Decoder;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D7ABE63529392117002EFC54 /* Project object */;
 }

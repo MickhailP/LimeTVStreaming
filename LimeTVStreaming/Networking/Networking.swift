@@ -9,8 +9,6 @@ import Foundation
 
 final class Networking: NetworkingProtocol {
     
-    let urlString: String = "https://limehd.online/playlist/channels.json"
-    
     func downloadData(from urlString: String) async throws -> Data {
         
         // Convert urlString to URL.
@@ -36,13 +34,13 @@ final class Networking: NetworkingProtocol {
     /// - Parameter response: URLResponse from dataTask
     private func handleResponse(_ response: URLResponse) throws {
         
-        guard
-            let response = response as? HTTPURLResponse,
-            response.statusCode >= 200 && response.statusCode <= 300
-        else {
+        guard let response = response as? HTTPURLResponse else {
             throw URLError(.badServerResponse)
         }
+        if  response.statusCode >= 200 && response.statusCode <= 300 {
+            return
+        } else {
+            throw NetworkingError.error(response.statusCode)
+        }
     }
-    
-    
 }
