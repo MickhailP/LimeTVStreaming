@@ -7,10 +7,11 @@
 
 import SwiftUI
 import AVKit
-import AVFoundation
 
 
 struct VideoView: View {
+    
+    @Environment(\.dismiss) var dismiss
     
     @StateObject var viewModel: VideoPlayerViewModel
     
@@ -21,34 +22,56 @@ struct VideoView: View {
     
     var body: some View {
         ZStack{
-            VStack {
-                Button("Change resolution") {
-                    withAnimation {
-                        viewModel.showResolutions.toggle()
-                    }
+            VideoPlayer(player: viewModel.player)
+                .ignoresSafeArea(.all)
+                .onAppear {
+                    viewModel.startStreaming()
                 }
-                .padding(5)
-                .font(Font.body.bold())
-                .buttonStyle(.plain)
-                
-                VideoPlayer(player: viewModel.player)
-                    .ignoresSafeArea(.all)
-                    .onAppear {
-                        viewModel.startStreaming()
-                    }
-            }
+            
+            
             // Change Resolution Button
             if viewModel.showResolutions {
                 changeResolutionButton
             }
         }
+        
+        .overlay(alignment: .topLeading) {
+            
+            HStack(spacing: 0) {
+                Button {
+                    withAnimation {
+                        dismiss()
+                    }
+                } label: {
+                    Image(systemName: "xmark.circle")
+                        .padding(8)
+                }
+                
+                Divider()
+                
+                Button {
+                    withAnimation {
+                        viewModel.showResolutions.toggle()
+                    }
+                } label: {
+                    Image(systemName: "slider.horizontal.2.square.on.square")
+                        .padding(8)
+                }
+            }
+            .buttonStyle(.plain)
+            .frame(maxHeight: 30)
+            .background(.gray.opacity(0.4))
+            .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
+            .padding()
+        }
+        
     }
 }
 extension VideoView {
     var changeResolutionButton: some View {
         VStack(spacing: 20) {
             Spacer()
-            ForEach(Resolution.allCases) { resolution in
+            ForEach(viewModel.availableResolutions) { resolution in
                 
                 Button(resolution.displayValue, action: {
                     withAnimation {

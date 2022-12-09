@@ -7,16 +7,27 @@
 
 import Foundation
 import AVKit
-import AVFoundation
 import Combine
 import M3U8Decoder
 
 final class VideoPlayerViewModel: ObservableObject {
     
+   
     // MARK: View properties
     @Published var selectedResolution: Resolution?
     @Published var player = AVPlayer()
     @Published var showResolutions = false
+    
+    
+    var availableResolutions: [Resolution] {
+        if let video = self.video {
+            return video.streams.compactMap({ stream in
+                stream.resolution
+            })
+        } else {
+            return []
+        }
+    }
     
     // MARK: Media properties
     private let channel: Channel
@@ -24,6 +35,8 @@ final class VideoPlayerViewModel: ObservableObject {
     
     // MARK: Cancellables
     private var cancellables = Set<AnyCancellable>()
+    
+    
 
     // MARK: Init
     init(channel: Channel) {

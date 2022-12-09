@@ -73,27 +73,32 @@ final class ChannelsViewViewModel: ObservableObject {
     /// If  fetching or decoding data has been failed, it will throw an error and show alert to user.
     /// - Parameter url: URL request to API
     private func fetchData(from url: String) async {
-        do {
-            let fetchedData = try await networkingService.downloadData(from: url)
-
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-
-            let decodedResponse = try decoder.decode(ChannelsModel.self, from: fetchedData)
-
-            await MainActor.run(body: {
-                channels = decodedResponse.channels
+    
+        let result = await networkingService.downloadDataResult(from: url)
+        
+        switch result {
+            case .success(let data):
+                do{
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    
+                    let decodedResponse = try decoder.decode(ChannelsModel.self, from: data)
+                    await MainActor.run(body: {
+                        channels = decodedResponse.channels
+                    })
+                    
+                } catch  {
+                    await MainActor.run(body: {
+                        print(error)
+                        print("Error occurred during decoding data", error.localizedDescription)
+                    })
+                }
                 
-            })
-
-        } catch {
-            await MainActor.run(body: {
-                showErrorMessage = true
-                errorMessage = error.localizedDescription
-                print(error)
-                print("Error occurred during fetching data", errorMessage)
-                
-            })
+            case .failure(let error):
+                await MainActor.run(body: {
+                    print(error)
+                    print("Error occurred during fetching data", error.localizedDescription)
+                })
         }
     }
 }

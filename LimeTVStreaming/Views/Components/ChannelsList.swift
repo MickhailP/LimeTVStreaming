@@ -24,7 +24,7 @@ struct ChannelsList: View {
             }
             .padding(.horizontal)
             .padding(.vertical, 10)
-            .sheet(item: $selectedChannel, content: { channel in
+            .fullScreenCover(item: $selectedChannel, content: { channel in
                 VideoView(channel: channel)
             })   
         }

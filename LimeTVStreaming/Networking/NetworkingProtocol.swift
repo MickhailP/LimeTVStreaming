@@ -8,5 +8,5 @@
 import Foundation
 
 protocol NetworkingProtocol {
-    func downloadData(from urlString: String) async throws -> Data
+    func downloadDataResult(from urlString: String) async -> Result<Data,Error>
 }

@@ -9,12 +9,12 @@ import Foundation
 
 final class Networking: NetworkingProtocol {
     
-    func downloadData(from urlString: String) async throws -> Data {
+    func downloadDataResult(from urlString: String) async -> Result<Data,Error> {
         
         // Convert urlString to URL.
         guard let url = URL(string: urlString) else {
             print("Failed to convert URLString")
-            throw URLError(.badURL)
+            return .failure( URLError(.badURL))
         }
         
         do {
@@ -22,11 +22,11 @@ final class Networking: NetworkingProtocol {
             try handleResponse(response)
 
             print(data)
-            return data
+            return .success(data)
         } catch {
             print(error)
             print("There was an error during data fetching! ", error.localizedDescription)
-            throw error
+            return .failure(error)
         }
     }
     
@@ -43,4 +43,28 @@ final class Networking: NetworkingProtocol {
             throw NetworkingError.error(response.statusCode)
         }
     }
+}
+
+extension Networking {
+    func downloadData(from urlString: String) async throws -> Data {
+
+        // Convert urlString to URL.
+        guard let url = URL(string: urlString) else {
+            print("Failed to convert URLString")
+            throw URLError(.badURL)
+        }
+
+        do {
+            let (data, response) = try await URLSession.shared.data(from: url)
+            try handleResponse(response)
+
+            print(data)
+            return data
+        } catch {
+            print(error)
+            print("There was an error during data fetching! ", error.localizedDescription)
+            throw error
+        }
+    }
+
 }

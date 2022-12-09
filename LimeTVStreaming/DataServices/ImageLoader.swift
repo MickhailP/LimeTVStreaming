@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-actor ImageLoaderActor  {
+actor ImageLoaderActor: ImageLoaderProtocol  {
     
     static let shared = ImageLoaderActor()
     
@@ -29,5 +29,6 @@ actor ImageLoaderActor  {
             return .failure(error)
         }
     }
-    
 }
+
+
