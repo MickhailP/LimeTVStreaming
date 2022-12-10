@@ -13,10 +13,11 @@ struct ImagePreview: View {
     
     @StateObject private var viewModel: ImagePreviewViewModel
     
+    
     // MARK: Init
-    init(frameSize: CGFloat, imageURL: String) {
+    init(frameSize: CGFloat, imageURL: String, imageKey: Int) {
         self.frameSize = frameSize
-        _viewModel = StateObject(wrappedValue: ImagePreviewViewModel(imageURL: imageURL))
+        _viewModel = StateObject(wrappedValue: ImagePreviewViewModel(imageURL: imageURL, imageKey: imageKey, networking: Networking.shared))
     }
     
     // MARK: View
@@ -38,6 +39,6 @@ struct ImagePreview: View {
 // MARK: Preview
 struct ImagePreview_Previews: PreviewProvider {
     static var previews: some View {
-        ImagePreview(frameSize: 75, imageURL: Channel.example.image)
+        ImagePreview(frameSize: 75, imageURL: Channel.example.image, imageKey: Channel.example.id)
     }
 }

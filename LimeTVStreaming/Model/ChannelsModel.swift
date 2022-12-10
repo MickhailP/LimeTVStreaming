@@ -32,8 +32,26 @@ struct Channel: Codable, Identifiable {
     let foreignPlayer: ForeignPlayer
     let foreignPlayerKey: Bool
     let url, urlSound, cdn: String
-    
-    // MARK: Exapmle
+
+}
+
+// MARK: - Current
+struct Current: Codable {
+    let timestart, timestop: Int
+    let title, desc: String
+    let cdnvideo, rating: Int
+}
+
+// MARK: - ForeignPlayer
+struct ForeignPlayer: Codable {
+    let sdk, url: String
+    let validFrom: Int
+
+}
+
+extension Channel {
+  
+    // MARK: Channel example
     static let example =
         Channel(id: 11, epgId: 12, nameRu: "THT", nameEn: "TNT",
                 vitrinaEventsUrl: "https://pl.iptv2021.com/api/v1/vitrina-config?id=136&tz=", isFederal: true, address: "tnt",
@@ -52,19 +70,4 @@ struct Channel: Codable, Identifiable {
                 url: "https://mhd.iptv2022.com/p/LslElCsq5wSnq4RmfqctfQ,1669884079/streaming/tntott/324/1/index.m3u8",
                 urlSound: "https://mhd.iptv2022.com/p/LslElCsq5wSnq4RmfqctfQ,1669884079/streaming/tntott/324/1/tracks-a1/mono.m3u8",
                 cdn: "https://limehd.cdnvideo.ru/streaming/tntott/324/1/index.m3u8?md5=VMBAktaDH3lIA5DhU2iVVA&e=1669884079")
-
-}
-
-// MARK: - Current
-struct Current: Codable {
-    let timestart, timestop: Int
-    let title, desc: String
-    let cdnvideo, rating: Int
-}
-
-// MARK: - ForeignPlayer
-struct ForeignPlayer: Codable {
-    let sdk, url: String
-    let validFrom: Int
-
 }

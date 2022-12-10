@@ -36,7 +36,6 @@ final class VideoPlayerViewModel: ObservableObject {
     // MARK: Cancellables
     private var cancellables = Set<AnyCancellable>()
     
-    
 
     // MARK: Init
     init(channel: Channel) {
@@ -51,11 +50,22 @@ final class VideoPlayerViewModel: ObservableObject {
             self.addResolutionSubscriber()
         }
     }
+    
+    // MARK: Playback controls methods
+    /// Unwrap the URL of the streaming, creates a  AVPlayer instance and start playing the video.
+    func startStreaming() {
+        if let url = URL(string: channel.url) {
+            player = AVPlayer(url: url)
+            player.play()
+            print(url)
+            print("Player should work")
+        }
+    }
 
-    // MARK: Change resolution
+    // MARK: Change resolution methods
     /// Change resolution of streaming
     /// - Parameter newResolution: The new resolution of the video.
-    func changeResolution(with newResolution: Resolution) {
+    private func changeResolution(with newResolution: Resolution) {
         
         guard let stream = video?.streams.first(where: {$0.resolution == newResolution}) else {
             print("Failed to change resolution")
@@ -77,15 +87,7 @@ final class VideoPlayerViewModel: ObservableObject {
         print("Resolution changed")
         
     }
-    
-    func startStreaming() {
-        if let url = URL(string: channel.url) {
-            player = AVPlayer(url: url)
-            player.play()
-            print(url)
-            print("Player should work")
-        }
-    }
+
     
     /// Subscribes on Resolution publisher, changes the current resolution of video streaming.
     private func addResolutionSubscriber() {

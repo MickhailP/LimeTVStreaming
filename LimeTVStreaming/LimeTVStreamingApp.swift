@@ -11,11 +11,10 @@ import SwiftUI
 struct LimeTVStreamingApp: App {
     
     @StateObject var favouritesChannels = Favourites()
-    let networking = Networking()
     
     var body: some Scene {
         WindowGroup {
-            ContentView(networking: networking)
+            ContentView()
                 .preferredColorScheme(.dark)
                 .environmentObject(favouritesChannels)
         }

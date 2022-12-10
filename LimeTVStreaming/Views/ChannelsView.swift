@@ -11,8 +11,8 @@ struct ChannelsView: View {
     
     @StateObject private var viewModel: ChannelsViewViewModel
     
-    init(networking: NetworkingProtocol, favourites: Favourites) {
-        _viewModel = StateObject(wrappedValue: ChannelsViewViewModel(networkingService: networking, favourites: favourites))
+    init(favourites: Favourites) {
+        _viewModel = StateObject(wrappedValue: ChannelsViewViewModel( networkingService: Networking.shared, favourites: favourites))
     }
     
     var body: some View {
@@ -34,7 +34,7 @@ struct ChannelsView_Previews: PreviewProvider {
     static let favouritesChannels = Favourites()
     
     static var previews: some View {
-        ChannelsView(networking: Networking(), favourites: Favourites())
+        ChannelsView(favourites: Favourites())
             .environmentObject(favouritesChannels)
             .preferredColorScheme(.dark)
         

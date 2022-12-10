@@ -7,7 +7,11 @@
 
 import Foundation
 
-final class Networking: NetworkingProtocol {
+actor Networking: NetworkingProtocol {
+    
+    static let shared = Networking()
+    
+    private init() { }
     
     func downloadDataResult(from urlString: String) async -> Result<Data,Error> {
         
@@ -43,28 +47,4 @@ final class Networking: NetworkingProtocol {
             throw NetworkingError.error(response.statusCode)
         }
     }
-}
-
-extension Networking {
-    func downloadData(from urlString: String) async throws -> Data {
-
-        // Convert urlString to URL.
-        guard let url = URL(string: urlString) else {
-            print("Failed to convert URLString")
-            throw URLError(.badURL)
-        }
-
-        do {
-            let (data, response) = try await URLSession.shared.data(from: url)
-            try handleResponse(response)
-
-            print(data)
-            return data
-        } catch {
-            print(error)
-            print("There was an error during data fetching! ", error.localizedDescription)
-            throw error
-        }
-    }
-
 }

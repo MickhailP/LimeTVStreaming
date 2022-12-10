@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CategoriesTabView: View {
     
-//    @State var currentTab: Int = 0
     @Namespace var namespace
     
     @ObservedObject var viewModel: ChannelsViewViewModel
@@ -24,9 +23,11 @@ struct CategoriesTabView: View {
             
             TabView(selection: $viewModel.selectedCategory) {
                 // All channels
-                ChannelsList(channels: viewModel.filteredChannels).tag(Categories.all)
+                ChannelsList(channels: viewModel.filteredChannels)
+                    .tag(Categories.all)
                 // Favourite channels
-                ChannelsList(channels: viewModel.filteredChannels).tag(Categories.favourites)
+                ChannelsList(channels: viewModel.filteredChannels)
+                    .tag(Categories.favourites)
             }
             .ignoresSafeArea(.all)
             .tabViewStyle(.page(indexDisplayMode: .never))
@@ -36,11 +37,11 @@ struct CategoriesTabView: View {
 
 extension CategoriesTabView {
     
-    var tabBarView: some View {
+    private var tabBarView: some View {
         ScrollView(.horizontal) {
             HStack(spacing: 20) {
-                ForEach(Array(zip(viewModel.tabItemsCategory.indices, viewModel.tabItemsCategory)), id: \.0) { index, category in
-                    tabBarItem(tabName: category.rawValue, tabIndex: index, category: category)
+                ForEach(viewModel.tabItemsCategory, id: \.self) {category in
+                    tabBarItem(tabName: category.rawValue, category: category)
                 }
             }
             .padding(.horizontal)
@@ -49,7 +50,12 @@ extension CategoriesTabView {
         .background(Color.gray.opacity(0.4))
     }
     
-   private func tabBarItem(tabName: String, tabIndex: Int, category: Categories) -> some View {
+    /// Creates an item for a custom Tab bar as a button.
+    /// - Parameters:
+    ///   - tabName: Displayed name of the item
+    ///   - category: The Category  compares with selected Category in View Model of CategoriesTabView to indicate selected category by creating an underlying bar.
+    /// - Returns: Button View
+   private func tabBarItem(tabName: String, category: Categories) -> some View {
         Button {
             withAnimation(.spring()){
                 viewModel.selectedCategory = category
@@ -61,7 +67,8 @@ extension CategoriesTabView {
                 if viewModel.selectedCategory == category {
                     Color.blue
                         .frame(height: 2)
-                        .matchedGeometryEffect(id: "underline", in: namespace, properties:  .frame).animation(.spring(), value: viewModel.selectedCategory)
+                        .matchedGeometryEffect(id: "underline", in: namespace, properties:  .frame)
+                        .animation(.spring(), value: viewModel.selectedCategory)
                 } else {
                     Color.clear.frame(height: 2)
                 }
@@ -75,7 +82,7 @@ struct CategoriesTabView_Previews: PreviewProvider {
     static let favouritesChannels = Favourites()
     
     static var previews: some View {
-        CategoriesTabView(viewModel: ChannelsViewViewModel(networkingService: Networking(), favourites: Favourites()))
+        CategoriesTabView(viewModel: ChannelsViewViewModel(networkingService: Networking.shared, favourites: Favourites()))
             .environmentObject(favouritesChannels)
     }
 }

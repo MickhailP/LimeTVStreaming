@@ -34,37 +34,9 @@ struct VideoView: View {
                 changeResolutionButton
             }
         }
-        
         .overlay(alignment: .topLeading) {
-            
-            HStack(spacing: 0) {
-                Button {
-                    withAnimation {
-                        dismiss()
-                    }
-                } label: {
-                    Image(systemName: "xmark.circle")
-                        .padding(8)
-                }
-                
-                Divider()
-                
-                Button {
-                    withAnimation {
-                        viewModel.showResolutions.toggle()
-                    }
-                } label: {
-                    Image(systemName: "slider.horizontal.2.square.on.square")
-                        .padding(8)
-                }
-            }
-            .buttonStyle(.plain)
-            .frame(maxHeight: 30)
-            .background(.gray.opacity(0.4))
-            .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
-            .padding()
+            customPlaybackControls
         }
-        
     }
 }
 extension VideoView {
@@ -94,6 +66,35 @@ extension VideoView {
         .frame(maxWidth: .infinity)
         .background(.thinMaterial)
         .transition(.move(edge: .bottom))
+    }
+    
+    var customPlaybackControls: some View {
+        HStack(spacing: 0) {
+            Button {
+                withAnimation {
+                    dismiss()
+                }
+            } label: {
+                Image(systemName: "xmark.circle")
+                    .padding(8)
+            }
+            
+            Divider()
+            
+            Button {
+                withAnimation {
+                    viewModel.showResolutions.toggle()
+                }
+            } label: {
+                Image(systemName: "slider.horizontal.2.square.on.square")
+                    .padding(8)
+            }
+        }
+        .buttonStyle(.plain)
+        .frame(maxHeight: 30)
+        .background(.gray.opacity(0.4))
+        .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
+        .padding()
     }
 }
 

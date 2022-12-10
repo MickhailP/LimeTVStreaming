@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ChannelRowView: View {
     
+    
     let channel: Channel
     
     let action: () -> Void
@@ -24,7 +25,7 @@ struct ChannelRowView: View {
             action()
         } label: {
             HStack {
-                ImagePreview(frameSize: 75, imageURL: channel.image)
+                ImagePreview(frameSize: 75, imageURL: channel.image, imageKey: channel.id)
                 InfoSection(title: channel.nameRu, description: channel.current.title)
                 
                 Spacer()
