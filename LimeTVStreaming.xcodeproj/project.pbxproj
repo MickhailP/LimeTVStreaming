@@ -10,7 +10,7 @@
 		D707900B293CA5D1005E8152 /* ChannelCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = D707900A293CA5D1005E8152 /* ChannelCategories.swift */; };
 		D707900D293CC4C5005E8152 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D707900C293CC4C5005E8152 /* VideoView.swift */; };
 		D7079010293CD5E8005E8152 /* M3U8Decoder in Frameworks */ = {isa = PBXBuildFile; productRef = D707900F293CD5E8005E8152 /* M3U8Decoder */; };
-		D7079012293CD7E0005E8152 /* MasterPlayist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7079011293CD7E0005E8152 /* MasterPlayist.swift */; };
+		D7079012293CD7E0005E8152 /* MasterPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7079011293CD7E0005E8152 /* MasterPlaylist.swift */; };
 		D7079014293CDEDF005E8152 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7079013293CDEDF005E8152 /* VideoModel.swift */; };
 		D7079016293CDF95005E8152 /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7079015293CDF95005E8152 /* VideoPlayerViewModel.swift */; };
 		D79961BF2944969F009C8F22 /* ImageStorageManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79961BE2944969F009C8F22 /* ImageStorageManagerProtocol.swift */; };
@@ -28,8 +28,6 @@
 		D7ABE6452939211A002EFC54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7ABE6442939211A002EFC54 /* Assets.xcassets */; };
 		D7ABE6482939211A002EFC54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7ABE6472939211A002EFC54 /* Preview Assets.xcassets */; };
 		D7ABE6522939211A002EFC54 /* LimeTVStreamingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE6512939211A002EFC54 /* LimeTVStreamingTests.swift */; };
-		D7ABE65C2939211A002EFC54 /* LimeTVStreamingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE65B2939211A002EFC54 /* LimeTVStreamingUITests.swift */; };
-		D7ABE65E2939211A002EFC54 /* LimeTVStreamingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE65D2939211A002EFC54 /* LimeTVStreamingUITestsLaunchTests.swift */; };
 		D7ABE66B2939212E002EFC54 /* .gitignore.md in Resources */ = {isa = PBXBuildFile; fileRef = D7ABE66A2939212E002EFC54 /* .gitignore.md */; };
 		D7ABE66E29392225002EFC54 /* ChannelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE66D29392225002EFC54 /* ChannelsModel.swift */; };
 		D7ABE671293924E6002EFC54 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE670293924E6002EFC54 /* Networking.swift */; };
@@ -61,7 +59,7 @@
 /* Begin PBXFileReference section */
 		D707900A293CA5D1005E8152 /* ChannelCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCategories.swift; sourceTree = "<group>"; };
 		D707900C293CC4C5005E8152 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
-		D7079011293CD7E0005E8152 /* MasterPlayist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterPlayist.swift; sourceTree = "<group>"; };
+		D7079011293CD7E0005E8152 /* MasterPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterPlaylist.swift; sourceTree = "<group>"; };
 		D7079013293CDEDF005E8152 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		D7079015293CDF95005E8152 /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
 		D79961BE2944969F009C8F22 /* ImageStorageManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStorageManagerProtocol.swift; sourceTree = "<group>"; };
@@ -82,8 +80,6 @@
 		D7ABE64D2939211A002EFC54 /* LimeTVStreamingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LimeTVStreamingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7ABE6512939211A002EFC54 /* LimeTVStreamingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeTVStreamingTests.swift; sourceTree = "<group>"; };
 		D7ABE6572939211A002EFC54 /* LimeTVStreamingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LimeTVStreamingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7ABE65B2939211A002EFC54 /* LimeTVStreamingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeTVStreamingUITests.swift; sourceTree = "<group>"; };
-		D7ABE65D2939211A002EFC54 /* LimeTVStreamingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeTVStreamingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D7ABE66A2939212E002EFC54 /* .gitignore.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 		D7ABE66D29392225002EFC54 /* ChannelsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsModel.swift; sourceTree = "<group>"; };
 		D7ABE670293924E6002EFC54 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
@@ -148,7 +144,6 @@
 				D7ABE66A2939212E002EFC54 /* .gitignore.md */,
 				D79F4B6B293B2DE4005F6FE1 /* .swiftlint.yml */,
 				D7ABE6502939211A002EFC54 /* LimeTVStreamingTests */,
-				D7ABE65A2939211A002EFC54 /* LimeTVStreamingUITests */,
 				D7ABE63E29392117002EFC54 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -195,21 +190,12 @@
 			path = LimeTVStreamingTests;
 			sourceTree = "<group>";
 		};
-		D7ABE65A2939211A002EFC54 /* LimeTVStreamingUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D7ABE65B2939211A002EFC54 /* LimeTVStreamingUITests.swift */,
-				D7ABE65D2939211A002EFC54 /* LimeTVStreamingUITestsLaunchTests.swift */,
-			);
-			path = LimeTVStreamingUITests;
-			sourceTree = "<group>";
-		};
 		D7ABE66C293921CE002EFC54 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				D7ABE66D29392225002EFC54 /* ChannelsModel.swift */,
 				D7079013293CDEDF005E8152 /* VideoModel.swift */,
-				D7079011293CD7E0005E8152 /* MasterPlayist.swift */,
+				D7079011293CD7E0005E8152 /* MasterPlaylist.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -425,7 +411,7 @@
 				D79F4B7E293B78A3005F6FE1 /* CategoriesTabView.swift in Sources */,
 				D707900B293CA5D1005E8152 /* ChannelCategories.swift in Sources */,
 				D7ABE64329392117002EFC54 /* ContentView.swift in Sources */,
-				D7079012293CD7E0005E8152 /* MasterPlayist.swift in Sources */,
+				D7079012293CD7E0005E8152 /* MasterPlaylist.swift in Sources */,
 				D7079014293CDEDF005E8152 /* VideoModel.swift in Sources */,
 				D79F4B79293B7040005F6FE1 /* FavouriteButton.swift in Sources */,
 				D79F4B77293B523C005F6FE1 /* SearchBar.swift in Sources */,
@@ -457,8 +443,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7ABE65E2939211A002EFC54 /* LimeTVStreamingUITestsLaunchTests.swift in Sources */,
-				D7ABE65C2939211A002EFC54 /* LimeTVStreamingUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

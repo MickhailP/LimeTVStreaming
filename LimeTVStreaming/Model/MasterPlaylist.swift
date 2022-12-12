@@ -1,5 +1,5 @@
 //
-//  MasterPlayist.swift
+//  MasterPlaylist.swift
 //  LimeTVStreaming
 //
 //  Created by Миша Перевозчиков on 04.12.2022.
