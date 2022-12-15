@@ -13,7 +13,12 @@
 		D7079012293CD7E0005E8152 /* MasterPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7079011293CD7E0005E8152 /* MasterPlaylist.swift */; };
 		D7079014293CDEDF005E8152 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7079013293CDEDF005E8152 /* VideoModel.swift */; };
 		D7079016293CDF95005E8152 /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7079015293CDF95005E8152 /* VideoPlayerViewModel.swift */; };
-		D79961BF2944969F009C8F22 /* ImageStorageManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79961BE2944969F009C8F22 /* ImageStorageManagerProtocol.swift */; };
+		D71CE2142948328000139AAD /* MockNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71CE2132948328000139AAD /* MockNetworking.swift */; };
+		D71CE2162948328F00139AAD /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71CE2152948328F00139AAD /* Mockable.swift */; };
+		D71CE21A2948DFDB00139AAD /* MockChannelsResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = D71CE2192948DFDB00139AAD /* MockChannelsResponse.json */; };
+		D71CE21C2948E86100139AAD /* ChannelsViewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71CE21B2948E86100139AAD /* ChannelsViewViewModelTests.swift */; };
+		D71CE21E294A28D500139AAD /* ImagePreviewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71CE21D294A28D400139AAD /* ImagePreviewViewModelTests.swift */; };
+		D79961BF2944969F009C8F22 /* ImageStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79961BE2944969F009C8F22 /* ImageStorageProtocol.swift */; };
 		D79961C129449902009C8F22 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79961C029449902009C8F22 /* ImageCacheManager.swift */; };
 		D79F4B6C293B2DE4005F6FE1 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D79F4B6B293B2DE4005F6FE1 /* .swiftlint.yml */; };
 		D79F4B6F293B3DD4005F6FE1 /* InfoSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79F4B6E293B3DD4005F6FE1 /* InfoSection.swift */; };
@@ -27,7 +32,7 @@
 		D7ABE64329392117002EFC54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE64229392117002EFC54 /* ContentView.swift */; };
 		D7ABE6452939211A002EFC54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7ABE6442939211A002EFC54 /* Assets.xcassets */; };
 		D7ABE6482939211A002EFC54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7ABE6472939211A002EFC54 /* Preview Assets.xcassets */; };
-		D7ABE6522939211A002EFC54 /* LimeTVStreamingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE6512939211A002EFC54 /* LimeTVStreamingTests.swift */; };
+		D7ABE6522939211A002EFC54 /* FavouritesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE6512939211A002EFC54 /* FavouritesTests.swift */; };
 		D7ABE66B2939212E002EFC54 /* .gitignore.md in Resources */ = {isa = PBXBuildFile; fileRef = D7ABE66A2939212E002EFC54 /* .gitignore.md */; };
 		D7ABE66E29392225002EFC54 /* ChannelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE66D29392225002EFC54 /* ChannelsModel.swift */; };
 		D7ABE671293924E6002EFC54 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ABE670293924E6002EFC54 /* Networking.swift */; };
@@ -47,13 +52,6 @@
 			remoteGlobalIDString = D7ABE63C29392117002EFC54;
 			remoteInfo = LimeTVStreaming;
 		};
-		D7ABE6582939211A002EFC54 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D7ABE63529392117002EFC54 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D7ABE63C29392117002EFC54;
-			remoteInfo = LimeTVStreaming;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -62,7 +60,12 @@
 		D7079011293CD7E0005E8152 /* MasterPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterPlaylist.swift; sourceTree = "<group>"; };
 		D7079013293CDEDF005E8152 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		D7079015293CDF95005E8152 /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
-		D79961BE2944969F009C8F22 /* ImageStorageManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStorageManagerProtocol.swift; sourceTree = "<group>"; };
+		D71CE2132948328000139AAD /* MockNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworking.swift; sourceTree = "<group>"; };
+		D71CE2152948328F00139AAD /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
+		D71CE2192948DFDB00139AAD /* MockChannelsResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockChannelsResponse.json; sourceTree = "<group>"; };
+		D71CE21B2948E86100139AAD /* ChannelsViewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewViewModelTests.swift; sourceTree = "<group>"; };
+		D71CE21D294A28D400139AAD /* ImagePreviewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewViewModelTests.swift; sourceTree = "<group>"; };
+		D79961BE2944969F009C8F22 /* ImageStorageProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStorageProtocol.swift; sourceTree = "<group>"; };
 		D79961C029449902009C8F22 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		D79F4B6B293B2DE4005F6FE1 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D79F4B6E293B3DD4005F6FE1 /* InfoSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoSection.swift; sourceTree = "<group>"; };
@@ -72,14 +75,14 @@
 		D79F4B78293B7040005F6FE1 /* FavouriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteButton.swift; sourceTree = "<group>"; };
 		D79F4B7A293B754E005F6FE1 /* ChannelsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsList.swift; sourceTree = "<group>"; };
 		D79F4B7D293B78A3005F6FE1 /* CategoriesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTabView.swift; sourceTree = "<group>"; };
+		D7A1AC6B294AD7C4005FBC25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D7ABE63D29392117002EFC54 /* LimeTVStreaming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LimeTVStreaming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7ABE64029392117002EFC54 /* LimeTVStreamingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeTVStreamingApp.swift; sourceTree = "<group>"; };
 		D7ABE64229392117002EFC54 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D7ABE6442939211A002EFC54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7ABE6472939211A002EFC54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D7ABE64D2939211A002EFC54 /* LimeTVStreamingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LimeTVStreamingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7ABE6512939211A002EFC54 /* LimeTVStreamingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeTVStreamingTests.swift; sourceTree = "<group>"; };
-		D7ABE6572939211A002EFC54 /* LimeTVStreamingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LimeTVStreamingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7ABE6512939211A002EFC54 /* FavouritesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTests.swift; sourceTree = "<group>"; };
 		D7ABE66A2939212E002EFC54 /* .gitignore.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 		D7ABE66D29392225002EFC54 /* ChannelsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsModel.swift; sourceTree = "<group>"; };
 		D7ABE670293924E6002EFC54 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
@@ -107,16 +110,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7ABE6542939211A002EFC54 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D71CE218294835D600139AAD /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D71CE2132948328000139AAD /* MockNetworking.swift */,
+				D71CE2192948DFDB00139AAD /* MockChannelsResponse.json */,
+				D71CE2152948328F00139AAD /* Mockable.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		D79F4B71293B3DE0005F6FE1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +159,6 @@
 			children = (
 				D7ABE63D29392117002EFC54 /* LimeTVStreaming.app */,
 				D7ABE64D2939211A002EFC54 /* LimeTVStreamingTests.xctest */,
-				D7ABE6572939211A002EFC54 /* LimeTVStreamingUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 		D7ABE63F29392117002EFC54 /* LimeTVStreaming */ = {
 			isa = PBXGroup;
 			children = (
+				D7A1AC6B294AD7C4005FBC25 /* Info.plist */,
 				D7ABE64029392117002EFC54 /* LimeTVStreamingApp.swift */,
 				D7ABE64229392117002EFC54 /* ContentView.swift */,
 				D7ABE67A29393731002EFC54 /* Views */,
@@ -185,7 +191,10 @@
 		D7ABE6502939211A002EFC54 /* LimeTVStreamingTests */ = {
 			isa = PBXGroup;
 			children = (
-				D7ABE6512939211A002EFC54 /* LimeTVStreamingTests.swift */,
+				D71CE218294835D600139AAD /* Mocks */,
+				D7ABE6512939211A002EFC54 /* FavouritesTests.swift */,
+				D71CE21D294A28D400139AAD /* ImagePreviewViewModelTests.swift */,
+				D71CE21B2948E86100139AAD /* ChannelsViewViewModelTests.swift */,
 			);
 			path = LimeTVStreamingTests;
 			sourceTree = "<group>";
@@ -216,7 +225,7 @@
 				D7ABE67529392B79002EFC54 /* Favourites.swift */,
 				D707900A293CA5D1005E8152 /* ChannelCategories.swift */,
 				D79961C029449902009C8F22 /* ImageCacheManager.swift */,
-				D79961BE2944969F009C8F22 /* ImageStorageManagerProtocol.swift */,
+				D79961BE2944969F009C8F22 /* ImageStorageProtocol.swift */,
 			);
 			path = DataServices;
 			sourceTree = "<group>";
@@ -236,8 +245,8 @@
 			children = (
 				D7ABE67B29393799002EFC54 /* ChannelsView.swift */,
 				D79F4B7D293B78A3005F6FE1 /* CategoriesTabView.swift */,
-				D707900C293CC4C5005E8152 /* VideoView.swift */,
 				D79F4B7A293B754E005F6FE1 /* ChannelsList.swift */,
+				D707900C293CC4C5005E8152 /* VideoView.swift */,
 				D79F4B71293B3DE0005F6FE1 /* Components */,
 			);
 			path = Views;
@@ -285,24 +294,6 @@
 			productReference = D7ABE64D2939211A002EFC54 /* LimeTVStreamingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D7ABE6562939211A002EFC54 /* LimeTVStreamingUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D7ABE6672939211A002EFC54 /* Build configuration list for PBXNativeTarget "LimeTVStreamingUITests" */;
-			buildPhases = (
-				D7ABE6532939211A002EFC54 /* Sources */,
-				D7ABE6542939211A002EFC54 /* Frameworks */,
-				D7ABE6552939211A002EFC54 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D7ABE6592939211A002EFC54 /* PBXTargetDependency */,
-			);
-			name = LimeTVStreamingUITests;
-			productName = LimeTVStreamingUITests;
-			productReference = D7ABE6572939211A002EFC54 /* LimeTVStreamingUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -317,10 +308,6 @@
 						CreatedOnToolsVersion = 14.1;
 					};
 					D7ABE64C2939211A002EFC54 = {
-						CreatedOnToolsVersion = 14.1;
-						TestTargetID = D7ABE63C29392117002EFC54;
-					};
-					D7ABE6562939211A002EFC54 = {
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = D7ABE63C29392117002EFC54;
 					};
@@ -344,7 +331,6 @@
 			targets = (
 				D7ABE63C29392117002EFC54 /* LimeTVStreaming */,
 				D7ABE64C2939211A002EFC54 /* LimeTVStreamingTests */,
-				D7ABE6562939211A002EFC54 /* LimeTVStreamingUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -354,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D71CE21A2948DFDB00139AAD /* MockChannelsResponse.json in Resources */,
 				D79F4B6C293B2DE4005F6FE1 /* .swiftlint.yml in Resources */,
 				D7ABE6482939211A002EFC54 /* Preview Assets.xcassets in Resources */,
 				D7ABE66B2939212E002EFC54 /* .gitignore.md in Resources */,
@@ -362,13 +349,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D7ABE64B2939211A002EFC54 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D7ABE6552939211A002EFC54 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -406,6 +386,8 @@
 			files = (
 				D7ABE66E29392225002EFC54 /* ChannelsModel.swift in Sources */,
 				D707900D293CC4C5005E8152 /* VideoView.swift in Sources */,
+				D71CE2162948328F00139AAD /* Mockable.swift in Sources */,
+				D71CE2142948328000139AAD /* MockNetworking.swift in Sources */,
 				D7ABE67629392B79002EFC54 /* Favourites.swift in Sources */,
 				D79F4B6F293B3DD4005F6FE1 /* InfoSection.swift in Sources */,
 				D79F4B7E293B78A3005F6FE1 /* CategoriesTabView.swift in Sources */,
@@ -418,7 +400,7 @@
 				D7ABE64129392117002EFC54 /* LimeTVStreamingApp.swift in Sources */,
 				D7ABE67C29393799002EFC54 /* ChannelsView.swift in Sources */,
 				D7ABE6732939251E002EFC54 /* NetworkingProtocol.swift in Sources */,
-				D79961BF2944969F009C8F22 /* ImageStorageManagerProtocol.swift in Sources */,
+				D79961BF2944969F009C8F22 /* ImageStorageProtocol.swift in Sources */,
 				D7ABE67929393723002EFC54 /* ChannelsViewViewModel.swift in Sources */,
 				D7ABE671293924E6002EFC54 /* Networking.swift in Sources */,
 				D79F4B73293B451C005F6FE1 /* NetworkingError.swift in Sources */,
@@ -435,14 +417,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7ABE6522939211A002EFC54 /* LimeTVStreamingTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D7ABE6532939211A002EFC54 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				D71CE21E294A28D500139AAD /* ImagePreviewViewModelTests.swift in Sources */,
+				D7ABE6522939211A002EFC54 /* FavouritesTests.swift in Sources */,
+				D71CE21C2948E86100139AAD /* ChannelsViewViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,11 +430,6 @@
 			isa = PBXTargetDependency;
 			target = D7ABE63C29392117002EFC54 /* LimeTVStreaming */;
 			targetProxy = D7ABE64E2939211A002EFC54 /* PBXContainerItemProxy */;
-		};
-		D7ABE6592939211A002EFC54 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D7ABE63C29392117002EFC54 /* LimeTVStreaming */;
-			targetProxy = D7ABE6582939211A002EFC54 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -587,6 +559,7 @@
 				DEVELOPMENT_TEAM = 95D5HHTHLU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LimeTVStreaming/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -617,6 +590,7 @@
 				DEVELOPMENT_TEAM = 95D5HHTHLU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LimeTVStreaming/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -676,42 +650,6 @@
 			};
 			name = Release;
 		};
-		D7ABE6682939211A002EFC54 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 95D5HHTHLU;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MichailDev.LimeTVStreamingUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LimeTVStreaming;
-			};
-			name = Debug;
-		};
-		D7ABE6692939211A002EFC54 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 95D5HHTHLU;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MichailDev.LimeTVStreamingUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LimeTVStreaming;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -738,15 +676,6 @@
 			buildConfigurations = (
 				D7ABE6652939211A002EFC54 /* Debug */,
 				D7ABE6662939211A002EFC54 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D7ABE6672939211A002EFC54 /* Build configuration list for PBXNativeTarget "LimeTVStreamingUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D7ABE6682939211A002EFC54 /* Debug */,
-				D7ABE6692939211A002EFC54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

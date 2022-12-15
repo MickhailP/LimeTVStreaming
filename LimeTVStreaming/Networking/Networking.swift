@@ -39,7 +39,7 @@ actor Networking: NetworkingProtocol {
     private func handleResponse(_ response: URLResponse) throws {
         
         guard let response = response as? HTTPURLResponse else {
-            throw URLError(.badServerResponse)
+            throw NetworkingError.badURLResponse
         }
         if  response.statusCode >= 200 && response.statusCode <= 300 {
             return

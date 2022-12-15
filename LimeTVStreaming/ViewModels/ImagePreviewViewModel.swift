@@ -11,11 +11,11 @@ import UIKit
 final class ImagePreviewViewModel: ObservableObject {
     
     private let networking: NetworkingProtocol
-    private let storageManager: ImageStorageManagerProtocol
+    private let storageManager: ImageStorageProtocol
     
     // MARK: View initialiser's properties
-    private let imageURL: String
-    private let imageKey: String
+    let imageURL: String
+    let imageKey: String
     
     // MARK: Image State
     @Published private(set) var image: UIImage?
@@ -27,11 +27,11 @@ final class ImagePreviewViewModel: ObservableObject {
     
     
     // MARK: Init
-    init(imageURL: String, imageKey: Int, networking: NetworkingProtocol) {
+    init(imageURL: String, imageKey: Int, networking: NetworkingProtocol = Networking.shared, storageManager: ImageStorageProtocol = ImageCacheManager.shared) {
         self.networking = networking
         self.imageURL = imageURL
         self.imageKey = String(imageKey)
-        self.storageManager = ImageCacheManager.shared
+        self.storageManager = storageManager
         getImage()
     }
     
@@ -59,7 +59,7 @@ final class ImagePreviewViewModel: ObservableObject {
                         if let image = image {
                             self.storageManager.add(key: self.imageKey, value: image)
                         }
-                    
+                        isLoading = false
                     case .failure(let error):
                         print(error, error.localizedDescription)
                         showError = true

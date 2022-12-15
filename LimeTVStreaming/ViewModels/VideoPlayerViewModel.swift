@@ -41,15 +41,14 @@ final class VideoPlayerViewModel: ObservableObject {
     init(channel: Channel) {
         self.channel = channel
         
-        decodePlaylist(from: channel.url) { playlist, url in
-           let video = self.decodeStreams(from: playlist, mainURL: url, channelName: channel.nameRu)
+        decodePlaylist(from: channel.url) { [weak self] playlist, url in
+           self?.video = self?.decodeStreams(from: playlist, mainURL: url, channelName: channel.nameRu)
+
             
-            DispatchQueue.main.async {
-                self.video = video
-            }
-            self.addResolutionSubscriber()
         }
+        addResolutionSubscriber()
     }
+    
     
     // MARK: Playback controls methods
     /// Unwrap the URL of the streaming, creates a  AVPlayer instance and start playing the video.
@@ -141,7 +140,7 @@ final class VideoPlayerViewModel: ObservableObject {
                 fatalError("Missing URL")
             }
             
-            // Create a Stream based o height of the video
+            // Create a Stream based on the height of the video
             switch streamInfo.inf.resolution?.height {
                 case 240:
                     return Stream(resolution: .p240, streamURL: newURL )

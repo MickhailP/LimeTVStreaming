@@ -11,8 +11,8 @@ import Foundation
 // MARK: - ChannelsModel
 struct ChannelsModel: Codable {
     let channels: [Channel]
-    let valid: Int
-    let ckey: String
+    let valid: Int?
+    let ckey: String?
 }
 
 // MARK: - Channel
@@ -49,9 +49,8 @@ struct ForeignPlayer: Codable {
 
 }
 
+// MARK: Channel example
 extension Channel {
-  
-    // MARK: Channel example
     static let example =
         Channel(id: 11, epgId: 12, nameRu: "THT", nameEn: "TNT",
                 vitrinaEventsUrl: "https://pl.iptv2021.com/api/v1/vitrina-config?id=136&tz=", isFederal: true, address: "tnt",
@@ -70,4 +69,11 @@ extension Channel {
                 url: "https://mhd.iptv2022.com/p/LslElCsq5wSnq4RmfqctfQ,1669884079/streaming/tntott/324/1/index.m3u8",
                 urlSound: "https://mhd.iptv2022.com/p/LslElCsq5wSnq4RmfqctfQ,1669884079/streaming/tntott/324/1/tracks-a1/mono.m3u8",
                 cdn: "https://limehd.cdnvideo.ru/streaming/tntott/324/1/index.m3u8?md5=VMBAktaDH3lIA5DhU2iVVA&e=1669884079")
+}
+
+// MARK: Equatable
+extension Channel: Equatable {
+    static func == (lhs: Channel, rhs: Channel) -> Bool {
+        lhs.id == rhs.id
+    }
 }

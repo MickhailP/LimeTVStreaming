@@ -17,7 +17,7 @@ struct ImagePreview: View {
     // MARK: Init
     init(frameSize: CGFloat, imageURL: String, imageKey: Int) {
         self.frameSize = frameSize
-        _viewModel = StateObject(wrappedValue: ImagePreviewViewModel(imageURL: imageURL, imageKey: imageKey, networking: Networking.shared))
+        _viewModel = StateObject(wrappedValue: ImagePreviewViewModel(imageURL: imageURL, imageKey: imageKey))
     }
     
     // MARK: View

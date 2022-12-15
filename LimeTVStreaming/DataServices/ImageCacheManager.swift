@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class ImageCacheManager: ImageStorageManagerProtocol {
+final class ImageCacheManager: ImageStorageProtocol {
     static let shared = ImageCacheManager()
     private init () { }
     

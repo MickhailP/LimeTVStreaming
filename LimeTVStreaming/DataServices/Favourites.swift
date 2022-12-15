@@ -9,15 +9,15 @@ import Foundation
 
 final class Favourites: ObservableObject {
     
-    @Published private var favouritesChannels: Set<Int> = []
+    @Published var favouritesChannels: Set<Int> = []
    
     @Published var showErrorAlert: Bool = false
     @Published private(set) var errorMessage: String = ""
     
     private let saveKey = "Favourites"
     
-    init() {
-        if let data = UserDefaults.standard.data(forKey: saveKey) {
+    init(userDefaults: UserDefaults = UserDefaults.standard) {
+        if let data = userDefaults.data(forKey: saveKey) {
             if let decodedData = try? JSONDecoder().decode(Set<Int>.self, from: data) {
                 favouritesChannels = decodedData
                 return

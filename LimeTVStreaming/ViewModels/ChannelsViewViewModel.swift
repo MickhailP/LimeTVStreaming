@@ -22,7 +22,6 @@ final class ChannelsViewViewModel: ObservableObject {
         if searchableChannel.isEmpty {
             return selectedChannels
         } else {
-            
             return selectedChannels.filter { $0.nameRu.localizedCaseInsensitiveContains(searchableChannel) }
         }
     }
@@ -37,7 +36,7 @@ final class ChannelsViewViewModel: ObservableObject {
         }
     }
     // All channels fetched from server
-    @Published private var channels: [Channel] = []
+    @Published private(set) var channels: [Channel] = []
     
     
     // MARK: Alert tracker
@@ -53,11 +52,10 @@ final class ChannelsViewViewModel: ObservableObject {
     
     
     // MARK: Init
-    init(networkingService: NetworkingProtocol, favourites: Favourites) {
+    init(networkingService: NetworkingProtocol = Networking.shared, favourites: Favourites) {
         self.networkingService = networkingService
         self.favourites = favourites
         requestChannels()
-      
     }
     
     // MARK: Methods
@@ -91,6 +89,8 @@ final class ChannelsViewViewModel: ObservableObject {
                     await MainActor.run(body: {
                         print(error)
                         print("Error occurred during decoding data", error.localizedDescription)
+                        errorMessage = "Error occurred during decoding data" + error.localizedDescription
+                        showErrorMessage = true
                     })
                 }
                 
@@ -98,6 +98,8 @@ final class ChannelsViewViewModel: ObservableObject {
                 await MainActor.run(body: {
                     print(error)
                     print("Error occurred during fetching data", error.localizedDescription)
+                    errorMessage = "Error occurred during fetching data" + error.localizedDescription
+                    showErrorMessage = true
                 })
         }
     }

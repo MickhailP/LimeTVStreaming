@@ -1,0 +1,72 @@
+{
+    "channels": [
+        {
+            "id": 105,
+            "epg_id": 105,
+            "name_ru": "Первый канал",
+            "name_en": "Первый канал",
+            "vitrina_events_url": "https://stv.iptv2022.com/api/v1/vitrina-config?id=105&tz=3",
+            "is_federal": true,
+            "address": "1kanal",
+            "image": "https://assets.iptv2022.com/static/channel/105/logo_256_1655386697.png",
+            "hasEpg": true,
+            "current": {
+                "timestart": 1670504400,
+                "timestop": 1670507400,
+                "title": "Мужское/Женское",
+                "desc": "Программа разбирает самые шокирующие, самые скандальные человеческие истории. Брата судят за убийство брата, восьмиклассница совращает взрослого мужчину, родители выбрасывают на улицу собственных детей",
+                "cdnvideo": 0,
+                "rating": 16
+            },
+            "region_code": 0,
+            "tz": 3,
+            "is_foreign": false,
+            "number": 1,
+            "drm_status": 0,
+            "owner": "lime",
+            "foreign_player": {
+                "sdk": "",
+                "url": "",
+                "valid_from": 1664520023
+            },
+            "foreign_player_key": true,
+            "url": "https://mhd.iptv2022.com/p/bgDp1wjg3SqjdLvWQI_pug,1670592488/streaming/1kanalott/324/1/index.m3u8",
+            "url_sound": "https://mhd.iptv2022.com/p/bgDp1wjg3SqjdLvWQI_pug,1670592488/streaming/1kanalott/324/1/tracks-a1/mono.m3u8",
+            "cdn": "https://limehd.cdnvideo.ru/streaming/1kanalott/324/1/index.m3u8?md5=eUDc5Q2SK8VXq-e6MDQQ1A&e=1670592488"
+        },
+        {
+            "id": 115,
+            "epg_id": 198,
+            "name_ru": "Россия-1",
+            "name_en": "Россия-1",
+            "vitrina_events_url": "https://stv.iptv2022.com/api/v1/vitrina-config?id=115&tz=3",
+            "is_federal": true,
+            "address": "rossia1",
+            "image": "https://assets.iptv2022.com/static/channel/115/logo_256_1655391177.png",
+            "hasEpg": true,
+            "current": {
+                "timestart": 1670504400,
+                "timestop": 1670506200,
+                "title": "Вести",
+                "desc": "В прямом эфире ведущие представят основные новости дня в сфере политики, культуры, общества и спорта. В выпуске репортажи о важнейших событиях, полученные от собственных российских и зарубежных корреспондентов",
+                "cdnvideo": 0,
+                "rating": 12
+            },
+            "region_code": 0,
+            "tz": 3,
+            "is_foreign": false,
+            "number": 2,
+            "drm_status": 0,
+            "owner": "vitrina",
+            "foreign_player": {
+                "sdk": "vitrinatv",
+                "url": "",
+                "valid_from": 1664520023
+            },
+            "foreign_player_key": true,
+            "url": "https://mhd.iptv2022.com/p/au7Pm3RBKdmHgeLPUHpJQA,1670592488/streaming/rossia1ott/324/1/index.m3u8",
+            "url_sound": "https://mhd.iptv2022.com/p/au7Pm3RBKdmHgeLPUHpJQA,1670592488/streaming/rossia1ott/324/1/tracks-a1/mono.m3u8",
+            "cdn": "https://limehd.cdnvideo.ru/streaming/rossia1ott/324/1/index.m3u8?md5=I1c-E5MqsvEcHRGzvhosUA&e=1670592488"
+        }
+    ]
+}

@@ -12,7 +12,7 @@ struct ChannelsView: View {
     @StateObject private var viewModel: ChannelsViewViewModel
     
     init(favourites: Favourites) {
-        _viewModel = StateObject(wrappedValue: ChannelsViewViewModel( networkingService: Networking.shared, favourites: favourites))
+        _viewModel = StateObject(wrappedValue: ChannelsViewViewModel(favourites: favourites))
     }
     
     var body: some View {
