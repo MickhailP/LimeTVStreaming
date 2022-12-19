@@ -27,12 +27,6 @@ struct VideoView: View {
                 .onAppear {
                     viewModel.startStreaming()
                 }
-            
-            
-            // Change Resolution Button
-            if viewModel.showResolutions {
-                changeResolutionButton
-            }
         }
         .overlay(alignment: .topLeading) {
             customPlaybackControls
@@ -40,33 +34,6 @@ struct VideoView: View {
     }
 }
 extension VideoView {
-    var changeResolutionButton: some View {
-        VStack(spacing: 20) {
-            Spacer()
-            ForEach(viewModel.availableResolutions) { resolution in
-                
-                Button(resolution.displayValue, action: {
-                    withAnimation {
-                        viewModel.selectedResolution = resolution
-                        viewModel.showResolutions.toggle()
-                    }
-                })
-            }
-            Button(action: {
-                withAnimation {
-                    viewModel.showResolutions.toggle()
-                }
-            }, label: {
-                Image(systemName: "xmark.circle")
-                    .imageScale(.large)
-            })
-            .padding(.top)
-            Spacer()
-        }
-        .frame(maxWidth: .infinity)
-        .background(.thinMaterial)
-        .transition(.move(edge: .bottom))
-    }
     
     var customPlaybackControls: some View {
         HStack(spacing: 0) {
@@ -81,20 +48,38 @@ extension VideoView {
             
             Divider()
             
-            Button {
-                withAnimation {
-                    viewModel.showResolutions.toggle()
-                }
+            Menu {
+                changeResolutionButton
             } label: {
                 Image(systemName: "slider.horizontal.2.square.on.square")
                     .padding(8)
             }
         }
         .buttonStyle(.plain)
+        .foregroundColor(.white)
         .frame(maxHeight: 30)
         .background(.gray.opacity(0.4))
         .clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
         .padding()
+    }
+    
+    var changeResolutionButton: some View {
+        
+        ForEach(viewModel.availableResolutions) { resolution in
+            
+            Button(resolution.displayValue, action: {
+                withAnimation {
+                    viewModel.selectedResolution = resolution
+                }
+            })
+            
+            Button {
+                
+            } label: {
+                Text("Button")
+            }
+
+        }
     }
 }
 

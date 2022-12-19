@@ -12,11 +12,10 @@ import M3U8Decoder
 
 final class VideoPlayerViewModel: ObservableObject {
     
-   
+    
     // MARK: View properties
     @Published var selectedResolution: Resolution?
     @Published var player = AVPlayer()
-    @Published var showResolutions = false
     
     
     var availableResolutions: [Resolution] {
@@ -36,15 +35,16 @@ final class VideoPlayerViewModel: ObservableObject {
     // MARK: Cancellables
     private var cancellables = Set<AnyCancellable>()
     
-
+    
     // MARK: Init
     init(channel: Channel) {
         self.channel = channel
         
         decodePlaylist(from: channel.url) { [weak self] playlist, url in
-           self?.video = self?.decodeStreams(from: playlist, mainURL: url, channelName: channel.nameRu)
-
-            
+            let video = self?.decodeStreams(from: playlist, mainURL: url, channelName: channel.nameRu)
+            DispatchQueue.main.async {
+                self?.video = video
+            }
         }
         addResolutionSubscriber()
     }
@@ -60,7 +60,7 @@ final class VideoPlayerViewModel: ObservableObject {
             print("Player should work")
         }
     }
-
+    
     // MARK: Change resolution methods
     /// Change resolution of streaming
     /// - Parameter newResolution: The new resolution of the video.
@@ -86,7 +86,7 @@ final class VideoPlayerViewModel: ObservableObject {
         print("Resolution changed")
         
     }
-
+    
     
     /// Subscribes on Resolution publisher, changes the current resolution of video streaming.
     private func addResolutionSubscriber() {
@@ -98,7 +98,7 @@ final class VideoPlayerViewModel: ObservableObject {
                 
             }))
             .store(in: &cancellables)
-            
+        
     }
     
     // MARK: Decoding methods
