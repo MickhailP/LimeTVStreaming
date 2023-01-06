@@ -16,17 +16,20 @@ struct ChannelsList: View {
     
     var body: some View {
         ScrollView {
-            ForEach(channels) { channel in
-                ChannelRowView(channel: channel) {
-                    showPlayer = true
-                    selectedChannel = channel
+            LazyVStack(spacing: 0){
+                ForEach(channels) { channel in
+                    ChannelRowView(channel: channel) {
+                        showPlayer = true
+                        selectedChannel = channel
+                    }
                 }
+                .padding(.horizontal)
+                .padding(.vertical, 7)
+                .fullScreenCover(item: $selectedChannel, content: { channel in
+                    VideoView(channel: channel)
+                })
             }
-            .padding(.horizontal)
-            .padding(.vertical, 10)
-            .fullScreenCover(item: $selectedChannel, content: { channel in
-                VideoView(channel: channel)
-            })   
+            .frame(maxWidth: .infinity)
         }
     }
 }
