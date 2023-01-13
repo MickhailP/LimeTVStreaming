@@ -20,9 +20,9 @@ final class VideoPlayerViewModel: ObservableObject {
     
     var availableResolutions: [Resolution] {
         if let video = self.video {
-            return video.streams.compactMap({ stream in
+            return video.streams.compactMap { stream in
                 stream.resolution
-            })
+            }
         } else {
             return []
         }
@@ -53,19 +53,21 @@ final class VideoPlayerViewModel: ObservableObject {
     // MARK: Playback controls methods
     /// Unwrap the URL of the streaming, creates a  AVPlayer instance and start playing the video.
     func startStreaming() {
-        if let url = URL(string: channel.url) {
-            player = AVPlayer(url: url)
-            player.play()
-            print(url)
-            print("Player should work")
-        }
+        guard let url = URL(string: channel.url) else { return }
+        
+        player = AVPlayer(url: url)
+        player.play()
+        print(url)
+        print("Player should work")
     }
+    
+    //Pure function/method
     
     // MARK: Change resolution methods
     /// Change resolution of streaming
     /// - Parameter newResolution: The new resolution of the video.
     private func changeResolution(with newResolution: Resolution) {
-        
+//        customPlayer.changeResolution
         guard let stream = video?.streams.first(where: {$0.resolution == newResolution}) else {
             print("Failed to change resolution")
             return

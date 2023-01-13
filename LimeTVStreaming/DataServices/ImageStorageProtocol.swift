@@ -12,3 +12,4 @@ protocol ImageStorageProtocol {
     func add(key: String, value: UIImage)
     func get(key: String) -> UIImage?
 }
+

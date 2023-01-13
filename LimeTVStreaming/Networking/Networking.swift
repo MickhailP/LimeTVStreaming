@@ -7,9 +7,48 @@
 
 import Foundation
 
+//enum CustomError: Error {
+//    case badURL
+//
+//    var alertDescription: String {
+//        switch self {
+//        case .badURL:
+//            "descri"
+//        }
+//    }
+//
+//}
+
+//https://github.com/Swinject/Swinject
+//https://github.com/Tinkoff/EasyDi
+
+//https://betterprogramming.pub/async-await-generic-network-layer-with-swift-5-5-2bdd51224ea9
+
+//protocol Endpoint {
+//    var httpMethod: Method { get }
+//}
+//enum Endpoints: Endpoint {
+//    case events
+//    case eventDetails(id: String)
+//    
+//    var httpMethod: Method {
+//        switch self {
+//        case .events:
+//            .get
+//        case .eventDetails:
+//            .post
+//        }
+//    }
+//    
+//}
+
 actor Networking: NetworkingProtocol {
     
     static let shared = Networking()
+    
+    //handlingError
+    //handlingResponse
+    //Data -> T.self
     
     private init() { }
     

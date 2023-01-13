@@ -7,6 +7,18 @@
 
 import SwiftUI
 
+//Main
+    //Model
+    //Views
+    //ViewModels
+
+//Favorites
+    //
+
+//Code-style
+    //https://github.com/airbnb/swift#airbnb-swift-style-guide
+
+
 @main
 struct LimeTVStreamingApp: App {
     

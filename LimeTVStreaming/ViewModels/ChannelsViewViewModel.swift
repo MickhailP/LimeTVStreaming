@@ -13,7 +13,7 @@ final class ChannelsViewViewModel: ObservableObject {
     private let favourites: Favourites
     
     // MARK: Categories
-    let tabItemsCategory: [Categories] = [.all, .favourites]
+    let tabItemsCategory: [Categories] = Categories.allCases //[.all, .favourites]
     @Published var selectedCategory: Categories = .all
     
     // MARK: Data

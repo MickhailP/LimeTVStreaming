@@ -6,6 +6,13 @@
 //
 
 import Foundation
+//Не понятна ответственность
+
+//https://www.avanderlee.com/swift/property-wrappers/
+// полезно для юзердефолт
+
+//assertionFailure()
+//assert(<#T##condition: Bool##Bool#>)
 
 final class Favourites: ObservableObject {
     

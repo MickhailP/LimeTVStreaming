@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+//Pulse - for logging https://github.com/kean/Pulse/blob/master/README.md
+
 final class ImagePreviewViewModel: ObservableObject {
     
     private let networking: NetworkingProtocol
@@ -19,15 +21,20 @@ final class ImagePreviewViewModel: ObservableObject {
     
     // MARK: Image State
     @Published private(set) var image: UIImage?
-    @Published private(set) var isLoading: Bool = true
+    @Published private(set) var isLoading = true
     
     // MARK: Error States
     @Published private(set) var showError: Bool = false
-    @Published private(set) var errorMessage: String = ""
+    @Published private(set) var errorMessage = ""
     
     
     // MARK: Init
-    init(imageURL: String, imageKey: Int, networking: NetworkingProtocol = Networking.shared, storageManager: ImageStorageProtocol = ImageCacheManager.shared) {
+    init(
+        imageURL: String,
+        imageKey: Int,
+        networking: NetworkingProtocol = Networking.shared,
+        storageManager: ImageStorageProtocol = ImageCacheManager.shared
+    ) {
         self.networking = networking
         self.imageURL = imageURL
         self.imageKey = String(imageKey)
@@ -56,7 +63,7 @@ final class ImagePreviewViewModel: ObservableObject {
                 switch result {
                     case .success(let imageData):
                         self.image = UIImage(data: imageData)
-                        if let image = image {
+                        if let image {
                             self.storageManager.add(key: self.imageKey, value: image)
                         }
                         isLoading = false
