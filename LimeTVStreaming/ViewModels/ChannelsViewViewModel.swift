@@ -67,7 +67,7 @@ final class ChannelsViewViewModel: ObservableObject {
     }
     
     // Create an asynchronous request for data through Networking service and decode received data.
-    ///
+    //
     /// If  fetching or decoding data has been failed, it will throw an error and show alert to user.
     /// - Parameter url: URL request to API
     private func fetchData(from url: String) async {
