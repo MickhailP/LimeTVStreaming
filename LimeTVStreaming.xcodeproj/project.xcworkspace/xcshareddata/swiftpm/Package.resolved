@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "m3u8decoder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ikhvorost/M3U8Decoder",
+      "state" : {
+        "revision" : "7260c5c23c0b778284fd635a1628dc6f31140868",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}
