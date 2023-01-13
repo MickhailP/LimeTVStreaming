@@ -9,4 +9,6 @@ import Foundation
 
 protocol NetworkingProtocol {
     func downloadDataResult(from urlString: String) async -> Result<Data,Error>
+//    func uploadData()
+//    func donloadDataWithProgress()
 }
