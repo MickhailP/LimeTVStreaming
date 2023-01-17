@@ -1,5 +1,5 @@
 //
-//  Favourites.swift
+//  FavouritesChannelsDataService.swift
 //  LimeTVStreaming
 //
 //  Created by Миша Перевозчиков on 01.12.2022.
@@ -7,24 +7,27 @@
 
 import Foundation
 
-final class Favourites: ObservableObject {
+final class FavouritesChannelsDataService: ObservableObject {
     
     @Published var favouritesChannels: Set<Int> = []
-   
+    
     @Published var showErrorAlert: Bool = false
     @Published private(set) var errorMessage: String = ""
     
-    private let saveKey = "Favourites"
+    private let saveKey = UserDefaults.SaveKeys.favouritesChannels
     
-    init(userDefaults: UserDefaults = UserDefaults.standard) {
-        if let data = userDefaults.data(forKey: saveKey) {
+    init(userDefaultsContainer: UserDefaults = UserDefaults.standard) {
+        self.favouritesChannels = getAlObjects(from: userDefaultsContainer)
+    }
+    
+    func getAlObjects(from userDefaults: UserDefaults) -> Set<Int> {
+        if let data = userDefaults.data(forKey: saveKey.rawValue) {
             if let decodedData = try? JSONDecoder().decode(Set<Int>.self, from: data) {
-                favouritesChannels = decodedData
-                return
+                return decodedData
             }
         }
         // If decoding fails or favourites is empty
-        favouritesChannels = []
+        return []
     }
     
     func contains(_ channelID: Int) -> Bool {
@@ -44,7 +47,8 @@ final class Favourites: ObservableObject {
     private func save()  {
         do {
             let encoded = try JSONEncoder().encode(favouritesChannels)
-            UserDefaults.standard.set(encoded, forKey: saveKey)
+            UserDefaults.standard.set(encoded, forKey: saveKey.rawValue)
+            
         } catch  {
             print("Can't encode and save data in database")
             print(error)

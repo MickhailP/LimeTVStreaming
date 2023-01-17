@@ -19,7 +19,7 @@ final class ChannelsViewViewModelTests: XCTestCase {
     override func setUpWithError() throws {
         userDefaults = UserDefaults(suiteName: #file)
                userDefaults.removePersistentDomain(forName: #file)
-        sut = ChannelsViewViewModel(networkingService: MockNetworking(),favourites: Favourites(userDefaults: userDefaults))
+        sut = ChannelsViewViewModel(networkingService: MockNetworking(),favourites: FavouritesChannelsDataService(userDefaultsContainer: userDefaults))
     }
 
     override func tearDownWithError() throws {

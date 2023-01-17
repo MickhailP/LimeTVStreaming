@@ -10,13 +10,13 @@ import XCTest
 
 final class FavouritesTests: XCTestCase {
 
-    var sut: Favourites!
+    var sut: FavouritesChannelsDataService!
     private var userDefaults: UserDefaults!
     
     override func setUpWithError() throws {
         userDefaults = UserDefaults(suiteName: #file)
         userDefaults.removePersistentDomain(forName: #file)
-        sut = Favourites(userDefaults: userDefaults)
+        sut = FavouritesChannelsDataService(userDefaultsContainer: userDefaults)
         
     }
 
@@ -53,10 +53,26 @@ final class FavouritesTests: XCTestCase {
         //When
         for i in 0..<loopCount {
             sut.deleteFromFavourites(i)
-            XCTAssertFalse(sut.contains(i))
         }
         
         //Then
         XCTAssertEqual(sut.favouritesChannels.count, 0)
+    }
+    
+    func test_Favourites_deleteFromFavourites_shouldNotContainsInUserDefaults() throws {
+        //Given
+        let loopCount = Int.random(in: 0..<100)
+        for i in 0..<loopCount {
+            sut.addToFavourites(i)
+        }
+        
+        //When
+        for i in 0..<loopCount {
+            sut.deleteFromFavourites(i)
+        }
+        
+        //Then
+        let storedData = sut.getAlObjects(from: userDefaults)
+        XCTAssertEqual(sut.favouritesChannels.count, storedData.count)
     }
 }

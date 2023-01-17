@@ -79,10 +79,10 @@ extension CategoriesTabView {
 }
 
 struct CategoriesTabView_Previews: PreviewProvider {
-    static let favouritesChannels = Favourites()
+    static let favouritesChannels = FavouritesChannelsDataService()
     
     static var previews: some View {
-        CategoriesTabView(viewModel: ChannelsViewViewModel(networkingService: Networking.shared, favourites: Favourites()))
+        CategoriesTabView(viewModel: ChannelsViewViewModel(networkingService: Networking.shared, favourites: FavouritesChannelsDataService()))
             .environmentObject(favouritesChannels)
     }
 }

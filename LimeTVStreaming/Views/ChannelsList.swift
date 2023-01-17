@@ -35,7 +35,7 @@ struct ChannelsList: View {
 }
 
 struct ChannelsList_Previews: PreviewProvider {
-    static let favouritesChannels = Favourites()
+    static let favouritesChannels = FavouritesChannelsDataService()
     
     static var previews: some View {
         ChannelsList(channels: [Channel.example, Channel.example])

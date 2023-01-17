@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct LimeTVStreamingApp: App {
     
-    @StateObject var favouritesChannels = Favourites()
+    @StateObject var favouritesChannels = FavouritesChannelsDataService()
     
     var body: some Scene {
         WindowGroup {

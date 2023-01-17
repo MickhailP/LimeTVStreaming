@@ -27,13 +27,17 @@ final class ImagePreviewViewModel: ObservableObject {
     
     
     // MARK: Init
-    init(imageURL: String, imageKey: Int, networking: NetworkingProtocol = Networking.shared, storageManager: ImageStorageProtocol = ImageCacheManager.shared) {
-        self.networking = networking
-        self.imageURL = imageURL
-        self.imageKey = String(imageKey)
-        self.storageManager = storageManager
-        getImage()
-    }
+    init(
+        imageURL: String,
+        imageKey: Int,
+        networking: NetworkingProtocol = Networking.shared,
+        storageManager: ImageStorageProtocol = ImageCacheManager.shared) {
+            self.networking = networking
+            self.imageURL = imageURL
+            self.imageKey = String(imageKey)
+            self.storageManager = storageManager
+            getImage()
+        }
     
     
     /// Check is Image store in Cache if it is not then the image should be downloaded from Internet
@@ -50,13 +54,14 @@ final class ImagePreviewViewModel: ObservableObject {
     /// Download an image by it's URL from the internet and handles a Result
     private func downloadImage() {
         Task {
-            let result = await networking.downloadDataResult(from: imageURL)
+            let url = URL(string: imageURL)
+            let result = await networking.downloadDataResult(from: url)
             
             await MainActor.run{
                 switch result {
                     case .success(let imageData):
                         self.image = UIImage(data: imageData)
-                        if let image = image {
+                        if let image {
                             self.storageManager.add(key: self.imageKey, value: image)
                         }
                         isLoading = false

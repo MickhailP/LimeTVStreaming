@@ -11,7 +11,7 @@ struct FavouriteButton: View {
     
     let channelID: Int
     
-    @EnvironmentObject var favourites: Favourites
+    @EnvironmentObject var favourites: FavouritesChannelsDataService
     
     var isFavourite: Bool {
         if favourites.contains(channelID) {

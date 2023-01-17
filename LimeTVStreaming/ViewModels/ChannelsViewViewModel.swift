@@ -10,10 +10,10 @@ import Foundation
 final class ChannelsViewViewModel: ObservableObject {
     
     // MARK: Favourites database
-    private let favourites: Favourites
+    private let favourites: FavouritesChannelsDataService
     
     // MARK: Categories
-    let tabItemsCategory: [Categories] = [.all, .favourites]
+    let tabItemsCategory: [Categories] = Categories.allCases//[.all, .favourites]
     @Published var selectedCategory: Categories = .all
     
     // MARK: Data
@@ -48,11 +48,11 @@ final class ChannelsViewViewModel: ObservableObject {
     
     // MARK: Networking layer
     private let networkingService: NetworkingProtocol
-    private let urlString: String = "https://limehd.online/playlist/channels.json"
+//    private let urlString: String = "https://limehd.online/playlist/channels.json"
     
     
     // MARK: Init
-    init(networkingService: NetworkingProtocol = Networking.shared, favourites: Favourites) {
+    init(networkingService: NetworkingProtocol = Networking.shared, favourites: FavouritesChannelsDataService) {
         self.networkingService = networkingService
         self.favourites = favourites
         requestChannels()
@@ -62,7 +62,7 @@ final class ChannelsViewViewModel: ObservableObject {
     /// Use this method to request channels from server in synchronous environment
     private func requestChannels() {
         Task {
-            await fetchData(from: urlString)
+            await fetchData(from: ChannelsEndpoints.allChannels)
         }
     }
     
@@ -70,9 +70,9 @@ final class ChannelsViewViewModel: ObservableObject {
     //
     /// If  fetching or decoding data has been failed, it will throw an error and show alert to user.
     /// - Parameter url: URL request to API
-    private func fetchData(from url: String) async {
+    private func fetchData(from endpoint: Endpoint) async {
     
-        let result = await networkingService.downloadDataResult(from: url)
+        let result = await networkingService.downloadDataResult(from: endpoint.url)
         
         switch result {
             case .success(let data):

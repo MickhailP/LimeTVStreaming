@@ -13,10 +13,10 @@ actor Networking: NetworkingProtocol {
     
     private init() { }
     
-    func downloadDataResult(from urlString: String) async -> Result<Data,Error> {
+    func downloadDataResult(from url: URL?) async -> Result<Data,Error> {
         
         // Convert urlString to URL.
-        guard let url = URL(string: urlString) else {
+        guard let url = url else {
             print("Failed to convert URLString")
             return .failure( URLError(.badURL))
         }
@@ -33,6 +33,8 @@ actor Networking: NetworkingProtocol {
             return .failure(error)
         }
     }
+    
+    
     
     /// Check if URLResponse have good status code, if it's not, it will throw an error
     /// - Parameter response: URLResponse from dataTask

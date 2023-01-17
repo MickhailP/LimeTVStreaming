@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @EnvironmentObject var favourites: Favourites
-    
+    @EnvironmentObject var favourites: FavouritesChannelsDataService
+
     var body: some View {
         ChannelsView(favourites: favourites)
             .alert(isPresented: $favourites.showErrorAlert) {
@@ -21,7 +21,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     
-    static let favouritesChannels = Favourites()
+    static let favouritesChannels = FavouritesChannelsDataService()
     
     static var previews: some View {
         ContentView()

@@ -17,7 +17,7 @@ struct VideoView: View {
     
     // MARK: Init
     init(channel: Channel) {
-        _viewModel = StateObject(wrappedValue: VideoPlayerViewModel(channel: channel))
+        _viewModel = StateObject(wrappedValue: VideoPlayerViewModel(channel: channel, playerManager: PlayerManager()))
     }
     
     var body: some View {
