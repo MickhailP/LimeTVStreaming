@@ -1,5 +1,5 @@
 //
-//  ChannelCategories.swift
+//  ChannelsCategories.swift
 //  LimeTVStreaming
 //
 //  Created by Миша Перевозчиков on 04.12.2022.
